@@ -1,13 +1,13 @@
 # Vagrant AWS Provider
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/mitchellh/vagrant-aws?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/bseyeph/vagrant-aws?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <span class="badges">
 [![Gem Version](https://badge.fury.io/rb/vagrant-aws.png)][gem]
-[![Dependency Status](https://gemnasium.com/mitchellh/vagrant-aws.png)][gemnasium]
+[![Dependency Status](https://gemnasium.com/bseyeph/vagrant-aws.png)][gemnasium]
 </span>
 
 [gem]: https://rubygems.org/gems/vagrant-aws
-[gemnasium]: https://gemnasium.com/mitchellh/vagrant-aws
+[gemnasium]: https://gemnasium.com/bseyeph/vagrant-aws
 
 This is a [Vagrant](http://www.vagrantup.com) 1.2+ plugin that adds an [AWS](http://aws.amazon.com)
 provider to Vagrant, allowing Vagrant to control and provision machines in
@@ -49,7 +49,7 @@ manually within a `config.vm.provider` block. So first, add the dummy
 box using any name you want:
 
 ```
-$ vagrant box add dummy https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box
+$ vagrant box add dummy https://github.com/bseyeph/vagrant-aws/raw/master/dummy.box
 ...
 ```
 

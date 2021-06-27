@@ -1,21 +1,52 @@
 # OS-specific
 .DS_Store
 
-# editors
-*.swp
+# Editor swapfiles
+.*.sw?
+*~
+
+# Vagrant stuff
+acceptance_config.yml
+boxes/*
+/.vagrant
+/website/.vagrant
+/website/build
+/vagrant-spec.config.rb
+test/vagrant-spec/.vagrant/
 
 # Bundler/Rubygems
 *.gem
 .bundle
 pkg/*
 tags
-Gemfile.lock
+/Gemfile.lock
+test/tmp/
+vendor/
+/exec
+.ruby-bundle
 
-# Vagrant
-.vagrant
-Vagrantfile
-!example_box/Vagrantfile
+# Documentation
+_site/*
+.yardoc/
+doc/
 
-# RVM files for gemset/ruby setting
-.ruby-*
+# Python
+*.pyc
+
+# Rubinius
+*.rbc
+
+# IDE junk
+.idea/*
+*.iml
+.project
+
+# Ruby Managers
+.rbenv
+.rbenv-gemsets
+.ruby-gemset
+.ruby-version
 .rvmrc
+
+# Box storage for spec
+test/vagrant-spec/boxes/*.box
