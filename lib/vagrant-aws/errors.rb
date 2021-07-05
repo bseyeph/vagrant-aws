@@ -1,10 +1,10 @@
-require "vagrant"
+require 'vagrant'
 
 module VagrantPlugins
   module AWS
     module Errors
       class VagrantAWSError < Vagrant::Errors::VagrantError
-        error_namespace("vagrant_aws.errors")
+        error_namespace('vagrant_aws.errors')
       end
 
       class FogError < VagrantAWSError
@@ -36,7 +36,7 @@ module VagrantPlugins
       end
 
       class ElbDoesNotExistError < VagrantAWSError
-        error_key("elb_does_not_exist")
+        error_key('elb_does_not_exist')
       end
     end
   end

@@ -1,8 +1,34 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant.configure("2") do |config|
-  config.vm.provider :aws do |aws|
-    aws.ami = "ami-7747d01e"
+class Hash
+  unless Hash.method_defined?(:slice)
+    def slice(*keep_keys)
+      h = {}
+      keep_keys.each { |key| h[key] = fetch(key) if has_key?(key) }
+      h
+    end
+  end
+  unless Hash.method_defined?(:except)
+    def except(*less_keys)
+      slice(*keys - less_keys)
+    end
+  end
+end
+
+Vagrant.configure('2') do |config|
+  config.vm.provider :aws do |aws, override|
+    aws.ami = 'ami-0ffa2b5d0eb4ca4dd'
+    aws.instance_type = 't2.micro'
+    aws.tags = {
+      'Name' => 'Username_Kali'
+    }
+    override.ssh.username = 'root'
+    override.ssh.private_key_path = '/home/bseyeph/.ssh/RangeKey.pem'
+  end
+
+  config.vm.define :box, primary: true do |box|
+    box.vm.box = 'dummy'
+    box.vm.network :public_network, ip: '192.168.1.111'
   end
 end

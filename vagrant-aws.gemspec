@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = 'Enables Vagrant to manage machines in EC2 and VPC.'
   spec.required_ruby_version = '>= 2.5'
   spec.required_rubygems_version = '>= 3.0.0'
-  spec.add_runtime_dependency 'fog', '~> 2.2.0'
+  spec.add_runtime_dependency 'fog-aws', '~> 3.10.0'
   spec.add_runtime_dependency 'iniparse', '~> 1.5.0'
   spec.add_development_dependency 'cucumber', '~> 6.1.0'
   spec.add_development_dependency 'geminabox', '~> 1.4.1'
