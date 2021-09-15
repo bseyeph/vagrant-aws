@@ -21,6 +21,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec-its', '~> 1.3.0'
 
   spec.files = Dir.glob('lib/**/*.rb')
-  spec.test_files = Dir.glob 'spec/**/*.rb'
+  spec.test_files = Dir.glob('spec/**/*.rb')
   spec.require_paths = %w[lib]
 end
